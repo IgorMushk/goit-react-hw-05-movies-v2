@@ -21,7 +21,7 @@ padding-left: 10px;
 `;
 
 const MovieItem =styled.li`
-width: 200px;
+width: 180px;
 text-align: center;
 :hover {
   font-weight: 600;
