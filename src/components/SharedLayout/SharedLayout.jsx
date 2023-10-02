@@ -2,6 +2,8 @@ import { Container, Header, Nav } from 'components/App.styled';
 import React, { Suspense } from 'react';
 import { Link, NavLink, Outlet } from 'react-router-dom';
 import styled from 'styled-components';
+//import css from './SharedLayout.module.css'
+import { Footer, FooterText } from './SharedLayout.styled';
 
 const StyledLink = styled(NavLink)`
   text-decoration: none;
@@ -19,7 +21,7 @@ const StyledLink = styled(NavLink)`
 
 const SharedLayout = () => {
   return (
-    <div>
+    <>
       <Header>
         <Container>
           <Nav>
@@ -41,8 +43,20 @@ const SharedLayout = () => {
           <Outlet />
         </Suspense>
       </main>
-    </div>
+      <Footer>
+        <FooterText>
+          &copy; {new Date().getFullYear()} Movie footer
+        </FooterText>
+      </Footer>
+    </>
   );
 };
 
 export default SharedLayout;
+
+// import css from './SharedLayout.module.css'
+// <footer className={css.footer}>
+//         <p className={css.footerText}>
+//           &copy; {new Date().getFullYear()} Movie footer
+//         </p>
+// </footer>
