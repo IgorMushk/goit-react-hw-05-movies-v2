@@ -7,6 +7,7 @@ const Title = styled.h2`
 `;
 
 const List = styled.ul`
+padding-left: 10px;
   list-style: none;
   display: flex;
   /* flex-direction: column; */
