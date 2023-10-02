@@ -66,7 +66,7 @@ const MovieDetails = () => {
             <>
               <MovieContainer>
                 <MovieImg
-                  src={`https://image.tmdb.org/t/p/w300${dataMovie.poster_path}`}
+                  src={`https://image.tmdb.org/t/p/w200${dataMovie.poster_path}`}
                   alt={`poster of ${dataMovie.title} movie`}
                 ></MovieImg>
                 <div>

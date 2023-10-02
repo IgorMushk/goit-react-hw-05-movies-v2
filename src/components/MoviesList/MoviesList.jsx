@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { List, } from './MoviesList.styled';
+import { ImgItem, List, MovieItem, MovieTitle, } from './MoviesList.styled';
 
 const MoviesList = ({ movies }) => {
   const location = useLocation();
@@ -11,11 +11,17 @@ const MoviesList = ({ movies }) => {
     <>
      <List>
         {movies.map(movie => (
-            <li key={movie.id}>
+            <MovieItem key={movie.id}>
                <Link to={`/movies/${movie.id}`} state={{ from:location}}>
-                  {movie.title}
+                  <ImgItem
+                  src={`https://image.tmdb.org/t/p/w200${movie.poster_path}`}
+                  alt={movie.title}
+                  />
+                  <div>
+                  <MovieTitle>{movie.title}</MovieTitle>
+                  </div>
                 </Link>
-             </li>
+             </MovieItem>
             ))}
      </List>
     </>
