@@ -48,7 +48,8 @@ const Movies = () => {
   };
 
   return (
-    <FormWrapper>
+    <>
+     <FormWrapper>
       <form onSubmit={handleSearchClick}>
         <FormInput
           type="text"
@@ -60,8 +61,9 @@ const Movies = () => {
           Search
         </ButtonSubmit>
       </form>
+       </FormWrapper>
     <MoviesList movies={dataMovies}/>
-    </FormWrapper>
+    </>
   );
 };
 
