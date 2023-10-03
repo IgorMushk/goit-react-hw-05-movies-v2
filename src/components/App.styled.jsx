@@ -9,7 +9,12 @@ const Container = styled.div`
 `;
 
 const Header = styled.header`
-  background-color: #032541;
+  //background-color: #032541;
+  background-color: rgb(3, 37, 65, 0.9);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+
 `;
 
 const Nav = styled.nav`
